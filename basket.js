@@ -15,4 +15,14 @@ Basket.prototype.removeItem = function(item){
   this.contents.splice(index, 1);
 }
 
+Basket.prototype.totalCost = function(){
+  let total=0;
+  for ( item of this.contents){
+    // console.log(item.price);
+    total += item.price;
+  }
+  // console.log(total);
+  return total.toFixed(1);
+}
+
 module.exports = Basket;

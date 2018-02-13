@@ -29,6 +29,13 @@ describe('Basket', function(){
     basket.removeItem(item);
     const actual = basket.numberOfItems();
     assert.deepStrictEqual(actual, 1);
-  })
+  });
+
+  it("should calculate total cost of items", function(){
+    basket.addItem(item);
+    basket.addItem(item2);
+    const actual = basket.totalCost();
+    assert.equal(actual, 1.70);
+  });
 
 });
